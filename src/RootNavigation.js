@@ -1,32 +1,13 @@
 // @flow
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from "react";
 
-import { createStackNavigator, createAppContainer } from 'react-navigation';
-
-import * as Pages from 'formationbam/src/pages';
-import { reduxifyNavigation } from 'react-navigation-redux-helpers';
-import { navListenerCreator } from './modules/Nav/module';
-
-export const AppNavigator = createAppContainer(
-  createStackNavigator({
-    home: {
-      screen: Pages.Home,
-    },
-  }),
-);
+import Home from "./pages/Home";
 
 class App extends React.Component {
   render() {
-    return <AppNavigator />;
+    return <Home />;
   }
 }
 
-const mapStateToProps = state => ({
-  nav: state.nav,
-});
-
-const AppWithNavigationState = connect(mapStateToProps)(App);
-
-export default AppWithNavigationState;
+export default App;

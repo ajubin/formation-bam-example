@@ -1,13 +1,11 @@
 // @flow
 
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
-import { appReducer } from './App';
-import { navReducer } from './Nav';
+import { appReducer } from "./App";
 
 const rootReducer = combineReducers({
-  app: appReducer,
-  nav: navReducer,
+  app: appReducer
 });
 
 export default rootReducer;
