@@ -9,6 +9,8 @@ import {
   TouchableOpacity
 } from "react-native";
 
+import colors from "../theme";
+
 const styles = StyleSheet.create({
   page: {
     backgroundColor: "white",
@@ -20,7 +22,7 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   welcomeTitle: {
-    color: "#49A698",
+    color: colors.primary,
     fontSize: 30
   },
   formContainer: {
@@ -34,7 +36,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 44,
     fontSize: 12,
-    backgroundColor: "#FAF7F7",
+    backgroundColor: colors.field,
     textAlign: "center"
   },
   button: {
@@ -42,12 +44,12 @@ const styles = StyleSheet.create({
     height: 44,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#49A698",
+    backgroundColor: colors.primary,
     borderRadius: 10,
     marginHorizontal: 10
   },
   buttonText: {
-    color: "#FFF",
+    color: colors.button,
     fontSize: 12
   },
   spacer: {
@@ -66,7 +68,7 @@ export default class Home extends Component {
           <TextInput
             placeholder="Entrez votre prénom"
             underlineColorAndroid="transparent"
-            placeholderTextColor="#616062"
+            placeholderTextColor={colors.placeholder}
             style={styles.field}
           />
           <TouchableOpacity activeOpacity={0.7} style={styles.button}>
